@@ -1,5 +1,3 @@
-USER_INPUT = list(input('Please write two integers and an operator    ').split())
-
 def calculator(two_variables_one_operator_list):
     """
     Mintlify says:
@@ -17,7 +15,9 @@ def calculator(two_variables_one_operator_list):
         if num1 % num2 != 0: return num1 / num2, 'divided'
         else: return num1 // num2, 'divided'
 
-print(f'The result of {USER_INPUT[0]} {calculator(USER_INPUT)[1]} {USER_INPUT[1]} is {calculator(USER_INPUT)[0]}')
-
 #It takes the integers and the operator as a list, 
 #the function simply does the input asigned operation 
+
+if __name__ == "__main__": 
+    USER_INPUT = list(input('Please write two integers and an operator    ').split())
+    print(f'The result of {USER_INPUT[0]} {calculator(USER_INPUT)[1]} {USER_INPUT[1]} is {calculator(USER_INPUT)[0]}')

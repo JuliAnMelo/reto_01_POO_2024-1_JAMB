@@ -4,31 +4,24 @@ def words_with_the_same_letters(strings):
     """
     Mintlify says:
     The function `words_with_the_same_letters` takes a list of strings as input, sorts the
-    strings by length, converts each string into a set of characters, and then checks for strings that
-    have the same set of characters. It returns a string containing the strings that have the same set
-    of characters.
+    strings by order as lists, and then checks for lists that
+    have the same characters. It returns a string containing the strings that have the same letters.
     """
 
-    string_list = sorted(strings, key = len)
-    string_set = []
-    for a_string in string_list:
-        string_set.append(set(a_string))
-
-    equal_sets = set()
+    anagram_strings = []
     index_one = 0
-    while index_one < (len(string_set) - 1):
+    while index_one < (len(string_list) - 1):
         index_two = index_one + 1
-        while index_two < len(string_set):
-            if string_set[index_one] != string_set[index_two]:
+        while index_two < len(string_list):
+            if sorted(list(string_list[index_one])) != sorted(list(string_list[index_two])):
                 index_two += 1
-            else: 
-                equal_sets.add(string_list[index_one])
-                equal_sets.add(string_list[index_two])
+            else:
+                if string_list[index_one] not in anagram_strings: anagram_strings.append(string_list[index_one])
+                if string_list[index_two] not in anagram_strings: anagram_strings.append(string_list[index_two])
                 index_two += 1
         index_one += 1
 
-    return ', '.join(map(str, equal_sets))
-
+    return ', '.join(anagram_strings)
 iwanttosleep = words_with_the_same_letters(some_strings)
 
 if len(iwanttosleep) > 0:

@@ -1,5 +1,3 @@
-some_strings = list(map(str, input('Please type a list of words    ').split()))
-
 def words_with_the_same_letters(strings):
     """
     Mintlify says:
@@ -22,13 +20,15 @@ def words_with_the_same_letters(strings):
         index_one += 1
 
     return ', '.join(anagram_strings)
-iwanttosleep = words_with_the_same_letters(some_strings)
-
-if len(iwanttosleep) > 0:
-    print(f'The words with the same letters are: {iwanttosleep}')
-if len(iwanttosleep) == 0:
-    print('There aren\'t any words with the same letters.')
 
 #This thing compares the word given by the user as sets,
 #doing one loop in other one with two index variables at the same time,
 #it works assuming that is only one set of letter repeated
+
+if __name__ == "__main__": 
+    SOME_STRINGS = list(map(str, input('Please type a list of words    ').split()))
+    iwanttosleep = words_with_the_same_letters(SOME_STRINGS)
+    if len(iwanttosleep) > 0:
+        print(f'The words with the same letters are: {iwanttosleep}')
+    if len(iwanttosleep) == 0:
+        print('There aren\'t any words with the same letters.')

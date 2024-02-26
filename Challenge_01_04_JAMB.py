@@ -1,5 +1,3 @@
-number_list = list(map(int, input('Please type a sequence of integers    ').split()))
-
 def maximum_sum(integer_list):
     """
     Mintlify says:
@@ -17,9 +15,11 @@ def maximum_sum(integer_list):
         index += 1
     return max_sum
 
-print(f'The maximum sum in the list is {maximum_sum(number_list)}')
-
 #is established a variable with the sum of the first two items from the list; 
 #with a while loop, the function add up the integers in the list by pairs,
 #updating the value of the variable until reaching the end of the list,
 #returning the maximum pair sum 
+
+if __name__ == "__main__": 
+    NUMBER_LIST = list(map(int, input('Please type a sequence of integers    ').split()))
+    print(f'The maximum sum in the list is {maximum_sum(NUMBER_LIST)}')

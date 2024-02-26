@@ -13,6 +13,7 @@ def calculator(two_variables_one_operator_list):
     if operator == '-': return num1 - num2, 'minus'
     if operator == '*': return num1 * num2, 'times'
     if operator == '/':
+        if num2 == 0: return 'invalid', 'divided'
         if num1 % num2 != 0: return num1 / num2, 'divided'
         else: return num1 // num2, 'divided'
 

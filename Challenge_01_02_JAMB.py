@@ -1,5 +1,3 @@
-WORD = input('Please write a word:    ')
-
 def palindrome(wrd):
     """
     Mintlify says:
@@ -17,8 +15,10 @@ def palindrome(wrd):
     if pal == False: return 'is not'
     else: return 'is'
 
-print(f'The word \'{WORD}\' {palindrome(WORD)} a palindrome')
-
 #I thought about converting the input in a list,
 #and through a while loop compare and eliminate the first and last letter
 #to verify if the word is a palindrome
+
+if __name__ == "__main__": 
+    WORD = input('Please write a word:    ')
+    print(f'The word \'{WORD}\' {palindrome(WORD)} a palindrome')

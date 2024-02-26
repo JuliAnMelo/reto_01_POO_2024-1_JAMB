@@ -9,9 +9,9 @@ def maximum_sum(integer_list):
     larger sum is found
     """
 
-    max_sum = 0
+    max_sum = integer_list[0] + integer_list[1]
     index = 0
-    while index < len(integer_list) - 2:
+    while index < len(integer_list) - 1:
         if integer_list[index] + integer_list[index + 1] > max_sum:
             max_sum = integer_list[index] + integer_list[index + 1]
         index += 1
